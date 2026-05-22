@@ -1,0 +1,37 @@
+[
+  {
+    "officer_id": 1,
+    "name": "Amit Verma",
+    "department": "Water Supply",
+    "active_cases": 12,
+    "district": "Lucknow"
+  },
+  {
+    "officer_id": 2,
+    "name": "Rakesh Singh",
+    "department": "Electricity",
+    "active_cases": 18,
+    "district": "Lucknow"
+  },
+  {
+    "officer_id": 3,
+    "name": "Pooja Mishra",
+    "department": "Sanitation",
+    "active_cases": 20,
+    "district": "Lucknow"
+  },
+  {
+    "officer_id": 4,
+    "name": "Neeraj Tiwari",
+    "department": "Road Repair",
+    "active_cases": 9,
+    "district": "Lucknow"
+  },
+  {
+    "officer_id": 5,
+    "name": "Dr. Shalini Gupta",
+    "department": "Health Services",
+    "active_cases": 7,
+    "district": "Lucknow"
+  }
+]

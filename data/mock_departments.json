@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name_en": "Water Supply",
+    "name_hi": "जल आपूर्ति विभाग",
+    "officer_name": "Amit Verma",
+    "open_tickets": 43,
+    "max_capacity": 50,
+    "avg_resolution_hours": 6
+  },
+  {
+    "id": 2,
+    "name_en": "Electricity",
+    "name_hi": "विद्युत विभाग",
+    "officer_name": "Rakesh Singh",
+    "open_tickets": 58,
+    "max_capacity": 50,
+    "avg_resolution_hours": 4
+  },
+  {
+    "id": 3,
+    "name_en": "Road Repair",
+    "name_hi": "सड़क मरम्मत विभाग",
+    "officer_name": "Neeraj Tiwari",
+    "open_tickets": 32,
+    "max_capacity": 45,
+    "avg_resolution_hours": 24
+  },
+  {
+    "id": 4,
+    "name_en": "Sanitation",
+    "name_hi": "स्वच्छता विभाग",
+    "officer_name": "Pooja Mishra",
+    "open_tickets": 65,
+    "max_capacity": 60,
+    "avg_resolution_hours": 12
+  },
+  {
+    "id": 5,
+    "name_en": "Encroachment",
+    "name_hi": "अतिक्रमण विभाग",
+    "officer_name": "Ankit Srivastava",
+    "open_tickets": 19,
+    "max_capacity": 30,
+    "avg_resolution_hours": 48
+  },
+  {
+    "id": 6,
+    "name_en": "Health Services",
+    "name_hi": "स्वास्थ्य सेवा विभाग",
+    "officer_name": "Dr. Shalini Gupta",
+    "open_tickets": 27,
+    "max_capacity": 40,
+    "avg_resolution_hours": 8
+  },
+  {
+    "id": 7,
+    "name_en": "Property Tax",
+    "name_hi": "संपत्ति कर विभाग",
+    "officer_name": "Vikas Yadav",
+    "open_tickets": 14,
+    "max_capacity": 35,
+    "avg_resolution_hours": 72
+  },
+  {
+    "id": 8,
+    "name_en": "Public Safety",
+    "name_hi": "जन सुरक्षा विभाग",
+    "officer_name": "Inspector Rajeev Sharma",
+    "open_tickets": 39,
+    "max_capacity": 40,
+    "avg_resolution_hours": 3
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "Water Supply": [
+    "water",
+    "paani",
+    "jal",
+    "pipeline",
+    "tap",
+    "drinking water",
+    "water leakage",
+    "पानी",
+    "जल",
+    "नल"
+  ],
+
+  "Electricity": [
+    "electricity",
+    "bijli",
+    "power cut",
+    "transformer",
+    "voltage",
+    "लाइन",
+    "बिजली",
+    "करंट"
+  ],
+
+  "Road Repair": [
+    "road",
+    "pothole",
+    "street",
+    "bridge",
+    "damaged road",
+    "सड़क",
+    "गड्ढा"
+  ],
+
+  "Sanitation": [
+    "garbage",
+    "kachra",
+    "waste",
+    "drainage",
+    "dirty",
+    "cleaning",
+    "कचरा",
+    "गंदगी",
+    "नाली"
+  ],
+
+  "Encroachment": [
+    "illegal construction",
+    "encroachment",
+    "land dispute",
+    "अतिक्रमण",
+    "कब्जा"
+  ],
+
+  "Health Services": [
+    "hospital",
+    "doctor",
+    "ambulance",
+    "medicine",
+    "health",
+    "अस्पताल",
+    "डॉक्टर",
+    "स्वास्थ्य"
+  ],
+
+  "Property Tax": [
+    "property tax",
+    "house tax",
+    "tax issue",
+    "संपत्ति कर",
+    "हाउस टैक्स"
+  ],
+
+  "Public Safety": [
+    "crime",
+    "unsafe",
+    "theft",
+    "police",
+    "harassment",
+    "सुरक्षा",
+    "पुलिस",
+    "चोरी"
+  ]
+}

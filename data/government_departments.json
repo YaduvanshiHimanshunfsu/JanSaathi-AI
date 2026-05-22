@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name_en": "Water Supply",
+    "name_hi": "जल आपूर्ति विभाग",
+    "helpline": "1916",
+    "website": "https://jalnigam.up.gov.in"
+  },
+  {
+    "id": 2,
+    "name_en": "Electricity",
+    "name_hi": "विद्युत विभाग",
+    "helpline": "1912",
+    "website": "https://uppcl.org"
+  },
+  {
+    "id": 3,
+    "name_en": "Road Repair",
+    "name_hi": "सड़क मरम्मत विभाग",
+    "helpline": "1800-180-5646",
+    "website": "https://pwd.up.gov.in"
+  },
+  {
+    "id": 4,
+    "name_en": "Sanitation",
+    "name_hi": "स्वच्छता विभाग",
+    "helpline": "1533",
+    "website": "https://lmc.up.nic.in"
+  },
+  {
+    "id": 5,
+    "name_en": "Encroachment",
+    "name_hi": "अतिक्रमण विभाग",
+    "helpline": "0522-2307770",
+    "website": "https://ldaonline.co.in"
+  },
+  {
+    "id": 6,
+    "name_en": "Health Services",
+    "name_hi": "स्वास्थ्य सेवा विभाग",
+    "helpline": "108",
+    "website": "https://uphealth.up.nic.in"
+  },
+  {
+    "id": 7,
+    "name_en": "Property Tax",
+    "name_hi": "संपत्ति कर विभाग",
+    "helpline": "1533",
+    "website": "https://lmc.up.nic.in"
+  },
+  {
+    "id": 8,
+    "name_en": "Public Safety",
+    "name_hi": "जन सुरक्षा विभाग",
+    "helpline": "112",
+    "website": "https://uppolice.gov.in"
+  },
+  {
+    "id": 9,
+    "name_en": "Women Security",
+    "name_hi": "महिला सुरक्षा एवं सहायता विभाग",
+    "helpline": "1090",
+    "website": "https://1090.up.gov.in"
+  },
+  {
+    "id": 10,
+    "name_en": "Cyber Crime",
+    "name_hi": "साइबर अपराध विभाग",
+    "helpline": "1930",
+    "website": "https://cybercrime.gov.in"
+  }
+]
