@@ -1,0 +1,48 @@
+# ================================
+# JanSaathi AI - Backend Requirements
+# ================================
+
+# FastAPI Backend
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Request Validation
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# OpenAI API
+openai==1.51.0
+
+# HTTP Requests
+requests==2.32.3
+httpx==0.27.2
+
+# Background Tasks & Scheduling
+apscheduler==3.10.4
+
+# Logging & Utilities
+loguru==0.7.2
+
+# JSON Handling
+orjson==3.10.7
+
+# CORS Support
+python-multipart==0.0.9
+
+# Data Handling
+pandas==2.2.3
+
+# Optional Analytics
+numpy==2.1.1
+
+# Optional Language Detection
+langdetect==1.0.9
+
+# Testing
+pytest==8.3.3
+
+# Development Tools
+black==24.8.0
