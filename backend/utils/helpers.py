@@ -43,3 +43,24 @@ def generate_ticket_id():
     year = datetime.now().year
     rand_num = random.randint(1000, 9999)
     return f"GRV-{year}-{rand_num}"
+
+def validate_pincode_lucknow(pincode):
+    """Validates if a given pincode belongs to Lucknow and returns area/zone."""
+    path = get_file_path("lucknow_pincodes.json")
+    if not os.path.exists(path):
+        return {"valid": False}
+    with open(path, "r", encoding="utf-8") as f:
+        try:
+            pincodes_data = json.load(f)
+        except json.JSONDecodeError:
+            return {"valid": False}
+            
+    pin_str = str(pincode).strip()
+    if pin_str in pincodes_data:
+        area_info = pincodes_data[pin_str]
+        return {
+            "valid": True,
+            "area": area_info.get("area"),
+            "zone": area_info.get("zone")
+        }
+    return {"valid": False}
