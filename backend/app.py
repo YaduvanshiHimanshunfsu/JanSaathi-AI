@@ -19,16 +19,30 @@ app = FastAPI(
 )
 
 # -------------------------------
-# CORS Configuration
+# Security & Middleware Configuration
 # -------------------------------
+
+# 1. Hardened CORS (Replace wildcard with specific origins)
+# Only allow our React frontend
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"]
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["*"],
 )
+
+# 2. Add Security Headers Middleware
+from middleware.security import SecurityHeadersMiddleware, setup_rate_limiting
+app.add_middleware(SecurityHeadersMiddleware)
+
+# 3. Setup Rate Limiting
+setup_rate_limiting(app)
 
 # -------------------------------
 # Include Routes

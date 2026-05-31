@@ -46,3 +46,11 @@ pytest==8.3.3
 
 # Development Tools
 black==24.8.0
+
+# ================================
+# Security Enhancements
+# ================================
+slowapi==0.1.9
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.0
