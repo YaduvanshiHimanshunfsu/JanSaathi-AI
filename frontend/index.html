@@ -1,29 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunwAI - Autonomous Grievance Intelligence System</title>
+  <meta name="description" content="AI-powered autonomous multi-agent grievance resolution portal for Lucknow Nagar Nigam. Built for APL GDG Lucknow.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for outstanding visual quality -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Chart.js for analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en"> <!-- Toggled between lang-en and lang-hi dynamically -->
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+  <!-- Background decorative glowing rings (Cross-browser compatible blur) -->
+  <div class="decor-glow glow-orange"></div>
+  <div class="decor-glow glow-blue"></div>
 
-    <title>JanSaathi AI</title>
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-badge">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <div class="logo-text">
+          <h1 id="header-title">सुनवाई <span class="accent-text">SunwAI</span></h1>
+          <p id="header-subtitle">Autonomous Grievance Intelligence System • Lucknow Nagar Nigam</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <!-- Bilingual Language Toggle Button -->
+        <button class="lang-toggle-btn" onclick="toggleLanguage()" id="lang-switch-btn" title="हिंदी / English">
+          <i class="fa-solid fa-language"></i> <span id="lang-btn-text">हिंदी (Hindi)</span>
+        </button>
+        <div class="badge-area">
+          <span class="badge badge-apl"><i class="fa-solid fa-trophy"></i> APL Qualifiers</span>
+          <span class="badge badge-loc"><i class="fa-solid fa-location-dot"></i> Lucknow</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
+  <!-- Navigation Bar -->
+  <nav class="navigation-bar">
+    <div class="nav-container">
+      <button class="nav-btn active" id="tab-citizen" onclick="switchTab('citizen')">
+        <i class="fa-solid fa-user-tie"></i> <span class="txt-nav-citizen">Citizen Portal</span>
+      </button>
+      <button class="nav-btn" id="tab-officer" onclick="switchTab('officer')">
+        <i class="fa-solid fa-shield-halved"></i> <span class="txt-nav-officer">Officer Panel</span>
+      </button>
+      <button class="nav-btn" id="tab-directory" onclick="switchTab('directory')">
+        <i class="fa-solid fa-building-columns"></i> <span class="txt-nav-directory">UP Gov Directory</span>
+      </button>
+      <button class="nav-btn" id="tab-analytics" onclick="switchTab('analytics')">
+        <i class="fa-solid fa-chart-pie"></i> <span class="txt-nav-analytics">Analytics</span>
+      </button>
+      
+      <!-- Autonomous Simulation Trigger -->
+      <button class="simulation-btn" onclick="triggerSimulationTick()" title="Simulate Background Ticks" id="sim-ticker-btn">
+        <i class="fa-solid fa-rotate"></i> <span id="txt-sim-tick">Sim Follow-up Tick</span>
+      </button>
+    </div>
+  </nav>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <!-- Main Content Container -->
+  <main class="main-content">
+    
+    <!-- Tab 1: Citizen Portal -->
+    <section id="section-citizen" class="tab-section active">
+      <div class="grid-2-1">
+        
+        <!-- Left: Expanded Structured Intake Form -->
+        <div class="glass-card">
+          <div class="card-header">
+            <h2 id="intake-title"><i class="fa-solid fa-pen-nib text-orange"></i> File a Grievance</h2>
+            <p id="intake-subtitle">Enter your official coordinates and submit details. SunwAI triages the issue natively.</p>
+          </div>
+          
+          <div class="intake-form-grid">
+            <div class="form-group">
+              <label for="citizen-name" id="lbl-citizen-name">Citizen Name / आपका नाम *</label>
+              <input type="text" id="citizen-name" placeholder="Shri Amit Srivastava" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="citizen-mobile" id="lbl-citizen-mobile">Mobile Number / मोबाइल नंबर *</label>
+              <input type="tel" id="citizen-mobile" placeholder="9876XXXXXX" pattern="[6-9][0-9]{9}" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="citizen-district" id="lbl-citizen-district">District / जिला *</label>
+              <select id="citizen-district" required>
+                <option value="Lucknow">Lucknow (लखनऊ)</option>
+                <option value="Kanpur">Kanpur (कानपुर)</option>
+                <option value="Prayagraj">Prayagraj (प्रयागराज)</option>
+                <option value="Varanasi">Varanasi (वाराणसी)</option>
+                <option value="Gorakhpur">Gorakhpur (गोरखपुर)</option>
+                <option value="Noida">Noida / GB Nagar (नोएडा)</option>
+                <option value="Ghaziabad">Ghaziabad (गाजियाबाद)</option>
+                <option value="Ayodhya">Ayodhya (अयोध्या)</option>
+                <option value="other">Other (अन्य)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="citizen-pincode" id="lbl-citizen-pincode">Pincode / पिनकोड *</label>
+              <input type="number" id="citizen-pincode" placeholder="226001" min="100000" max="999999" required>
+            </div>
+          </div>
+          
+          <div class="intake-form-wide">
+            <div class="form-group">
+              <label for="selected-department" id="lbl-select-dept">Select Department / विभाग चुनें *</label>
+              <select id="selected-department" onchange="toggleOtherDeptField()" required>
+                <option value="auto">Auto-Classify via AI (एआई द्वारा स्वतः वर्गीकरण करें)</option>
+                <option value="pothole_road">Pothole & Road Repair (सड़क सुधार विभाग)</option>
+                <option value="water_supply">Water Supply / Jal Kal (जल कल विभाग)</option>
+                <option value="electricity">Electricity / LESA (लखनऊ विद्युत प्रशासन)</option>
+                <option value="sanitation_waste">Sanitation / Waste (स्वच्छता एवं कचरा प्रबंधन)</option>
+                <option value="encroachment">Encroachment (अतिक्रमण विरोधी दस्ता)</option>
+                <option value="health_hospital">Health / Hospital (स्वास्थ्य एवं चिकित्सा विभाग)</option>
+                <option value="property_tax">Property Tax (गृह कर विभाग)</option>
+                <option value="public_safety">Public Safety / Police (जन सुरक्षा विभाग)</option>
+                <option value="other">Other / (अन्य विभाग)</option>
+              </select>
+            </div>
 
-  <body class="bg-secondary">
-    <div id="root"></div>
+            <div class="form-group">
+              <label for="complaint-language" id="lbl-complaint-lang">Language of Complaint / शिकायत की भाषा *</label>
+              <select id="complaint-language" required>
+                <option value="auto">Auto-Detect Dialect (एआई द्वारा स्वतः भाषा पहचानें)</option>
+                <option value="Hindi">Pure Hindi (शुद्ध हिंदी)</option>
+                <option value="English">English / Hinglish (अंग्रेजी / हिंग्लिश)</option>
+              </select>
+            </div>
+            
+            <!-- Slide-down "Other Department Name" input field (Hidden by default) -->
+            <div class="form-group slide-anim-field" id="other-department-group" style="display: none;">
+              <label for="other-department" id="lbl-other-dept">Specify Department Name / विभाग का नाम लिखें *</label>
+              <input type="text" id="other-department" placeholder="उदा. उद्यान विभाग (Forestry Dept)">
+            </div>
+            
+            <div class="form-group">
+              <label for="complaint-text" id="lbl-comp-desc">Describe your complaint / समस्या का विस्तृत विवरण लिखें *</label>
+              <textarea id="complaint-text" placeholder="हजरतगंज चौराहे के पास सड़क पर बहुत बड़ा गड्ढा हो गया है, आए दिन लोग गिर रहे हैं..." rows="4" required></textarea>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary btn-lg btn-glow" id="submit-btn" onclick="submitComplaint()">
+              <i class="fa-solid fa-paper-plane"></i> <span id="txt-submit-btn">Process via AI Agents</span>
+            </button>
+          </div>
+          
+          <!-- Sequential Agent Loop Animation (Hidden by default) -->
+          <div class="agent-orchestration-container" id="agent-orchestrator" style="display: none;">
+            <h3 id="txt-agent-triage-title"><i class="fa-solid fa-network-wired spinner-icon"></i> AI Multi-Agent Triage Pipeline</h3>
+            <ul class="agent-steps">
+              <li class="agent-step" id="step-intake">
+                <span class="step-bullet"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                <span class="step-info">
+                  <strong class="txt-step1-name">Agent 1: Intake & Normalization</strong>
+                  <p class="step-desc txt-step1-desc">Detecting dialect and cleaning transcription noise...</p>
+                </span>
+              </li>
+              <li class="agent-step" id="step-classify">
+                <span class="step-bullet"><i class="fa-regular fa-circle"></i></span>
+                <span class="step-info">
+                  <strong class="txt-step2-name">Agent 2: Classification & Urgency</strong>
+                  <p class="step-desc txt-step2-desc">Extracting category tone, priority score, and target SLA...</p>
+                </span>
+              </li>
+              <li class="agent-step" id="step-route">
+                <span class="step-bullet"><i class="fa-regular fa-circle"></i></span>
+                <span class="step-info">
+                  <strong class="txt-step3-name">Agent 3: Routing & Load Balancer</strong>
+                  <p class="step-desc txt-step3-desc">Scanning departmental stress levels to assign officer...</p>
+                </span>
+              </li>
+              <li class="agent-step" id="step-comm">
+                <span class="step-bullet"><i class="fa-regular fa-circle"></i></span>
+                <span class="step-info">
+                  <strong class="txt-step4-name">Agent 4: Vernacular Communication</strong>
+                  <p class="step-desc txt-step4-desc">Crafting polite Lucknow-style Hindi update & briefing...</p>
+                </span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Grievance Processing Result (Hidden by default) -->
+          <div class="grievance-success-card" id="grievance-result" style="display: none;">
+            <div class="success-header">
+              <div class="success-icon"><i class="fa-solid fa-check-double"></i></div>
+              <div>
+                <h4 id="txt-success-h4">Grievance Registered Successfully!</h4>
+                <p id="result-ticket-id" class="text-glow">GRV-2026-XXXX</p>
+              </div>
+            </div>
+            
+            <div class="results-grid">
+              <div class="result-item">
+                <span class="result-label" id="lbl-res-dept">Assigned Department</span>
+                <span class="result-val" id="result-dept">सड़क एवं मार्ग सुधार विभाग</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label" id="lbl-res-officer">Nodal Officer</span>
+                <span class="result-val" id="result-officer">Er. R. K. Srivastava</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label" id="lbl-res-prio">Urgency & Priority</span>
+                <span class="result-val" id="result-priority">Priority 4 (Distressed)</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label" id="lbl-res-sla">Resolution SLA Goal</span>
+                <span class="result-val" id="result-sla">24 Hours</span>
+              </div>
+            </div>
+            
+            <div class="result-keywords-box" id="result-keywords-container" style="margin-bottom: 1.2rem; display: none;">
+              <span class="sms-title" id="lbl-res-keywords"><i class="fa-solid fa-tags"></i> Matched Keywords / स्कैन किए गए कीवर्ड</span>
+              <div class="keywords-list" id="result-keywords-list" style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                <!-- Badges populated dynamically -->
+              </div>
+            </div>
+            
+            <div class="result-sms-box">
+              <span class="sms-title" id="lbl-res-sms-title"><i class="fa-solid fa-mobile-screen-button"></i> Vernacular Citizen SMS Sendout (Hindi)</span>
+              <p class="sms-content" id="result-sms">नमस्ते नागरिक, आपकी शिकायत...</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Sandbox Complaints Library -->
+        <div class="glass-card flex-col">
+          <div class="card-header">
+            <h2 id="sandbox-title"><i class="fa-solid fa-folder-open text-blue"></i> Sandbox Cases</h2>
+            <p id="sandbox-subtitle">Click any complaint below to auto-fill the form coordinates for lightning-fast presentation demos.</p>
+          </div>
+          
+          <div class="sample-complaints-list" id="sample-complaints-box">
+            <div class="loading-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i> Loading complaints library...</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <!-- Tab 2: Officer Command Center -->
+    <section id="section-officer" class="tab-section">
+      <!-- Live Overload Alerts -->
+      <div id="overload-alerts-container"></div>
+      
+      <div class="glass-card">
+        <div class="card-header-flex">
+          <div>
+            <h2 id="registry-title"><i class="fa-solid fa-shield-halved text-orange"></i> Unified Grievance Registry</h2>
+            <p id="registry-subtitle">Internal municipal node panel for LNN commissioners and nodal officers.</p>
+          </div>
+          <div class="filter-controls">
+            <label for="dept-filter" id="lbl-dept-filter"><i class="fa-solid fa-filter"></i> Department Filter:</label>
+            <select id="dept-filter" onchange="loadGrievancesList()">
+              <option value="all">All Departments (सभी विभाग)</option>
+              <option value="pothole_road">Pothole & Road Repair</option>
+              <option value="water_supply">Water Supply (Jal Kal)</option>
+              <option value="electricity">Electricity (LESA)</option>
+              <option value="sanitation_waste">Sanitation & Waste</option>
+              <option value="encroachment">Encroachment & Building</option>
+              <option value="health_hospital">Health Services</option>
+              <option value="property_tax">Property Tax</option>
+              <option value="public_safety">Public Safety</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="table-scroll-container">
+          <table class="officer-table">
+            <thead>
+              <tr>
+                <th id="th-ticket-id">Ticket ID</th>
+                <th id="th-details">Citizen Info & Description</th>
+                <th id="th-keywords">Keywords</th>
+                <th id="th-priority">Priority</th>
+                <th id="th-sla">SLA Clock</th>
+                <th id="th-status">Status</th>
+                <th id="th-officer">Assigned Officer</th>
+                <th id="th-action">Action</th>
+              </tr>
+            </thead>
+            <tbody id="grievances-table-body">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: UP Government Department Directory (New Feature!) -->
+    <section id="section-directory" class="tab-section">
+      <div class="glass-card">
+        <div class="card-header">
+          <h2 id="dir-title"><i class="fa-solid fa-building-columns text-orange"></i> Uttar Pradesh Government Directory</h2>
+          <p id="dir-subtitle">Official directory and links to primary state portals and Lucknow civic bodies.</p>
+        </div>
+        
+        <!-- Search bar for directory links -->
+        <div class="dir-search-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="directory-search" placeholder="Search departments, portals, or official coordinates..." onkeyup="filterDirectory()">
+        </div>
+        
+        <div class="directory-grid" id="directory-items-box">
+          <div class="loading-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i> Loading UP government directory...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Dynamic Analytics -->
+    <section id="section-analytics" class="tab-section">
+      <!-- KPI Stats Row -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-icon bg-orange"><i class="fa-solid fa-list-check"></i></div>
+          <div class="stat-info">
+            <span class="stat-label id-total-lbl">Total Grievances</span>
+            <span class="stat-val" id="stat-total">0</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-green"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="stat-info">
+            <span class="stat-label id-resolved-lbl">Resolved Tickets</span>
+            <span class="stat-val" id="stat-resolved">0</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-blue"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div class="stat-info">
+            <span class="stat-label id-avg-sla-lbl">Avg. SLA Target</span>
+            <span class="stat-val" id="stat-sla">24h</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="stat-info">
+            <span class="stat-label id-overload-lbl">Overloaded Nodes</span>
+            <span class="stat-val" id="stat-overloaded">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-2">
+        <div class="glass-card">
+          <div class="card-header">
+            <h3 id="anal-dept-title">Grievances by Department</h3>
+          </div>
+          <div class="chart-container">
+            <canvas id="deptChart"></canvas>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-header">
+            <h3 id="anal-prio-title">Urgency Priority Distribution</h3>
+          </div>
+          <div class="chart-container">
+            <canvas id="priorityChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Detailed Grievance Modal -->
+  <div class="modal-backdrop" id="grievance-modal" style="display: none;">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <h3 id="modal-heading-text">Grievance Deep-Dive</h3>
+        <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" id="modal-content-area">
+        <!-- Content loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p id="txt-footer-tag">SunwAI Autonomous Agent Portal — Built at GDG Lucknow Agentic Premier League (APL) Qualifiers.</p>
+      <p class="footer-team">Team Jansathi AI • 2026</p>
+    </div>
+  </footer>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
 </html>

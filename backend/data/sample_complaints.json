@@ -1,0 +1,72 @@
+[
+  {
+    "id": "comp_1",
+    "text": "हजरतगंज चौराहे के पास सड़क पर बहुत बड़ा गड्ढा हो गया है, आए दिन लोग गिरकर चोटिल हो रहे हैं। कल एक बाइक सवार बहुत बुरी तरह गिरा। कृपया इसे जल्द से जल्द ठीक करवाएं, कोई बड़ा हादसा हो सकता है!",
+    "language": "Hindi",
+    "category": "pothole_road",
+    "urgency": "critical"
+  },
+  {
+    "id": "comp_2",
+    "text": "गोमती नगर विस्तार सेक्टर 4 में पिछले तीन दिनों से पानी की सप्लाई बिल्कुल ठप है। जो थोड़ा बहुत पानी आ भी रहा है, वह बहुत गंदा और बदबूदार है। पीने तो क्या, नहाने लायक भी नहीं है। कृपया संज्ञान लें।",
+    "language": "Hindi",
+    "category": "water_supply",
+    "urgency": "distressed"
+  },
+  {
+    "id": "comp_3",
+    "text": "Aliganj sector H me transformer se bohot teez chingari nikal rahi hai aur baar baar light cut ho rahi hai. Any time fire accident ho sakta hai yaha! LESA power fluctuation is very high. Please check immediately!",
+    "language": "Hinglish",
+    "category": "electricity",
+    "urgency": "critical"
+  },
+  {
+    "id": "comp_4",
+    "text": "अमीनाबाद बाजार की मुख्य गली में कूड़े का ढेर लगा हुआ है। तीन दिन से नगर निगम की गाड़ी नहीं आई है। सड़ते हुए कचरे से भयंकर बदबू आ रही है और मक्खियां भिनभिना रही हैं। बीमारी फैलने का डर है।",
+    "language": "Hindi",
+    "category": "sanitation_waste",
+    "urgency": "concerned"
+  },
+  {
+    "id": "comp_5",
+    "text": "कपूरथला मार्केट में कुछ दुकानदारों ने अपनी दुकान का सामान सड़क और फुटपाथ पर फैला रखा है। अवैध कब्जे की वजह से भयंकर जाम लगता है और पैदल चलने वाले लोगों को सड़क पर चलना पड़ता है जिससे दुर्घटना का खतरा है।",
+    "language": "Hindi",
+    "category": "encroachment",
+    "urgency": "concerned"
+  },
+  {
+    "id": "comp_6",
+    "text": "सिविल अस्पताल के पीछे वाले नाले की सफाई न होने से मच्छरों का प्रकोप बहुत बढ़ गया है। हमारे इलाके में डेंगू और मलेरिया के मरीज बढ़ रहे हैं। नगर निगम से अनुरोध है कि फॉगिंग (दवा छिड़काव) करवाई जाए।",
+    "language": "Hindi",
+    "category": "health_hospital",
+    "urgency": "distressed"
+  },
+  {
+    "id": "comp_7",
+    "text": "mera house tax bill me name galat print ho gaya hai. Srivastav ki jagah Shrivastva likh diya hai. Maine portal par correction request dali thi 2 mahine pehle, par abhi tak status pending hai. Please name correct kijiye.",
+    "language": "Hinglish",
+    "category": "property_tax",
+    "urgency": "calm"
+  },
+  {
+    "id": "comp_8",
+    "text": "चारबाग रेलवे स्टेशन के बाहर ऑटो स्टैंड के पास शाम को कुछ असामाजिक तत्व जमा होते हैं, शराब पीते हैं और आने-जाने वाली महिलाओं पर फब्तियां कसते हैं। यहां पुलिस गश्त बढ़ाने की जरूरत है ताकि लोग सुरक्षित महसूस करें।",
+    "language": "Hindi",
+    "category": "public_safety",
+    "urgency": "critical"
+  },
+  {
+    "id": "comp_9",
+    "text": "विकास नगर में पानी का प्रेशर इतना कम है कि पहली मंजिल पर पानी चढ़ता ही नहीं है। मोटर चलाने पर भी पानी नहीं आ रहा। गर्मियों के मौसम में पानी के बिना हाहाकार मचा हुआ है। कृपया मोटर पंप की जांच कराएं।",
+    "language": "Hindi",
+    "category": "water_supply",
+    "urgency": "distressed"
+  },
+  {
+    "id": "comp_10",
+    "text": "Indira Nagar sector 14 park me local log daily plastic waste aur garbage jala rahe hain. Isse poore area me zehreli gas aur smoke phail jata hai, saans lene me dikkat ho rahi hai senior citizens ko. Action lijiye.",
+    "language": "Hinglish",
+    "category": "sanitation_waste",
+    "urgency": "critical"
+  }
+]

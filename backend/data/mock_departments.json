@@ -1,0 +1,74 @@
+[
+  {
+    "id": "pothole_road",
+    "name_en": "Pothole & Road Repair",
+    "name_hi": "सड़क एवं मार्ग सुधार विभाग",
+    "officer_name": "Er. R. K. Srivastava",
+    "open_tickets": 4,
+    "max_capacity": 10,
+    "avg_resolution_hours": 48
+  },
+  {
+    "id": "water_supply",
+    "name_en": "Water Supply (Jal Kal)",
+    "name_hi": "जल कल विभाग",
+    "officer_name": "Shri Amit Kumar",
+    "open_tickets": 2,
+    "max_capacity": 8,
+    "avg_resolution_hours": 24
+  },
+  {
+    "id": "electricity",
+    "name_en": "Electricity (LESA)",
+    "name_hi": "लखनऊ विद्युत आपूर्ति प्रशासन (LESA)",
+    "officer_name": "Er. Vinay Dwivedi",
+    "open_tickets": 9,
+    "max_capacity": 10,
+    "avg_resolution_hours": 12
+  },
+  {
+    "id": "sanitation_waste",
+    "name_en": "Sanitation & Waste Management",
+    "name_hi": "नगर निगम स्वच्छता एवं कचरा प्रबंधन",
+    "officer_name": "Smt. Shweta Singh",
+    "open_tickets": 3,
+    "max_capacity": 12,
+    "avg_resolution_hours": 24
+  },
+  {
+    "id": "encroachment",
+    "name_en": "Encroachment & Illegal Construction",
+    "name_hi": "अतिक्रमण एवं अवैध निर्माण रोधी विभाग",
+    "officer_name": "Shri Rajesh Shukla",
+    "open_tickets": 1,
+    "max_capacity": 5,
+    "avg_resolution_hours": 72
+  },
+  {
+    "id": "health_hospital",
+    "name_en": "Health & Medical Services",
+    "name_hi": "स्वास्थ्य एवं चिकित्सा सेवा विभाग",
+    "officer_name": "Dr. S. K. Maurya",
+    "open_tickets": 2,
+    "max_capacity": 8,
+    "avg_resolution_hours": 36
+  },
+  {
+    "id": "property_tax",
+    "name_en": "Property Tax Department",
+    "name_hi": "गृह कर (हाउस टैक्स) विभाग",
+    "officer_name": "Shri Akhilesh Mishra",
+    "open_tickets": 0,
+    "max_capacity": 15,
+    "avg_resolution_hours": 96
+  },
+  {
+    "id": "public_safety",
+    "name_en": "Public Safety & Police Liaison",
+    "name_hi": "जन सुरक्षा एवं पुलिस संपर्क विभाग",
+    "officer_name": "Inspector B. P. Singh",
+    "open_tickets": 1,
+    "max_capacity": 6,
+    "avg_resolution_hours": 8
+  }
+]
