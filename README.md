@@ -9,13 +9,24 @@
 
 > **सुनवाई SunwAI** is a premium, resilient, autonomous multi-agent grievance orchestration and resolution ecosystem specifically optimized for Uttar Pradesh's metropolitan municipalities. Built to solve delayed routing, officer fatigue, and language accessibility, SunwAI auto-classifies vernacular complaints (English, Hindi, Hinglish), routes them to the least-loaded officer with predictive SLAs, and autonomously follows up while keeping citizens updated through real-time native SMS messages.
 
+For highly detailed documentation covering the full Problem Statement, Approach, and Cybersecurity methods, please see the `docs/` folder in this repository.
+
 ---
 
-## 📅 May 31, 2026 - Major Security & Agentic V2 Overhaul
+## 📅 The Evolution of SunwAI
 
-Today, the entire system architecture was rewritten and heavily upgraded for production-grade security, LLM stability, and advanced agentic analysis. 
+This project was built iteratively to tackle the massive bureaucratic bottlenecks present in India's public complaint portals. We successfully evolved the system from a fast MVP (Version 1) to a highly secure, scalable, and intelligent ecosystem (Version 2).
 
-### 🌟 What's New?
+### 🛠️ Version 1: The Initial MVP Build
+The original version of SunwAI was focused entirely on proving the Multi-Agent Concept.
+- **Goal**: Demonstrate that AI agents can talk to each other and handle basic public routing.
+- **Tech Stack**: FastAPI + basic HTML/JS + Gemini 1.5 Flash.
+- **Workflow**: A user could type a complaint in Hinglish, and a simple linear chain of 4 AI Agents (Intake -> Classify -> Route -> Comm) would process it and output a mocked ticket.
+- **Limitations**: No security. No database. The APIs were completely open, vulnerable to LLM injection, spammers, and malicious DDOS actors. It was highly susceptible to duplicate ticketing (e.g. 5 neighbors reporting the same pothole).
+
+### 🛡️ Version 2: The May 31st, 2026 Production & Security Overhaul
+Today, the entire system architecture was rewritten and heavily upgraded for production-grade cybersecurity, web stability, and advanced agentic analysis. 
+
 1. **Gemini 2.5 Flash Upgrade**: Entire backend pipeline migrated from the deprecated `gemini-1.5-flash` model directly to `gemini-2.5-flash`, significantly boosting reasoning speed, Hinglish parsing accuracy, and eliminating silent API 404 drops.
 2. **Citizen Credibility Index (Section 8)**: Implemented a robust 0-100 credibility scoring algorithm. The AI analyzes if OTP is verified, word count density, geospatial tagging, distress scoring, and duplication flags to assign a priority status (Low, Medium, High, Verified) to prevent malicious or manufactured urgency attacks.
 3. **OTP & JWT Secure Tunneling (Section 4 & 5)**: 
