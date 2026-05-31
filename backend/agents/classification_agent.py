@@ -25,7 +25,7 @@ class ClassificationAgentV2:
                     api_key=self.gemini_key,
                     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
                 )
-                self.model_name = "gemini-1.5-flash"
+                self.model_name = "gemini-2.5-flash"
             except ImportError:
                 pass
         elif self.openai_key:

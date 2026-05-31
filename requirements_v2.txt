@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+PyJWT
+cryptography
+google-genai
+google-generativeai
+openai
+requests
+PyJWT==2.13.0

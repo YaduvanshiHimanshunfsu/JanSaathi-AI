@@ -18,7 +18,7 @@ if is_gemini:
         api_key=settings.OPENAI_API_KEY,
         base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
     )
-    DEFAULT_MODEL = "gemini-1.5-flash"
+    DEFAULT_MODEL = "gemini-2.5-flash"
 else:
     client = OpenAI(api_key=settings.OPENAI_API_KEY)
     DEFAULT_MODEL = "gpt-4o-mini"

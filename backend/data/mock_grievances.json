@@ -1,341 +1,524 @@
 [
-    {
-        "id": "GRV-2026-8901",
-        "citizen_name": "Smt. Vineeta Bajpai",
-        "citizen_mobile": "9450123456",
-        "district": "Lucknow",
-        "pincode": "226016",
-        "raw_text": "चिनहट तिराहे पर पिछले दो हफ़्तों से स्ट्रीट लाइट बंद पड़ी है। रात में पूरा अंधेरा रहता है जिससे दुर्घटनाओं का डर बना रहता है।",
-        "normalized_text": "चिनहट तिराहे पर पिछले दो हफ़्तों से स्ट्रीट लाइट बंद पड़ी है। रात में पूरा अंधेरा रहता है जिससे दुर्घटनाओं का डर बना रहता है।",
-        "language": "Hindi",
+  {
+    "spam_blocked": false,
+    "intake_flags": [],
+    "word_count": 21,
+    "normalized_text": "bhaiya yaha gomti nagar me sadak kharab hai, gadha ho gaya hai pichle 2 din se, emergency accident ho sakta hai",
+    "citizen_name": "Himanshu Yadav",
+    "citizen_mobile": "9876543210",
+    "district": "Lucknow",
+    "pincode": "226010",
+    "selected_department": "Other",
+    "other_department": "",
+    "complaint_language": "auto",
+    "category": "pothole_road",
+    "sub_category": "pothole",
+    "department": "pothole_road",
+    "priority": 4,
+    "urgency_label": "distressed",
+    "predicted_sla_hours": 36,
+    "confidence": 0.95,
+    "reasoning": [
+      "The complaint explicitly states 'sadak kharab hai' and 'gadha ho gaya hai', directly indicating a road issue.",
+      "The mention of 'emergency accident ho sakta hai' elevates the urgency and priority of the complaint.",
+      "The location 'Gomti Nagar' is specified for the road defect."
+    ],
+    "geo_tag": "Gomti Nagar",
+    "distress_score": 7,
+    "emotional_tone": "frustrated",
+    "detected_emotions": [
+      "frustration",
+      "urgency",
+      "fear"
+    ],
+    "escalation_recommended": false,
+    "sentiment_note": "Citizen is reporting a dangerous pothole present for 2 days, expressing urgency and fear of potential accidents.",
+    "assigned_department": "Other",
+    "assigned_officer": "Fallback Officer",
+    "department_hi": "अन्य विभाग",
+    "overload_flag": false,
+    "avg_resolution_hours": 24,
+    "is_clustered": false,
+    "incident_id": null,
+    "incident_linked_count": 0,
+    "incident_severity": null,
+    "timestamp": "2026-05-31T18:35:00.392022",
+    "citizen_message": "प्रिय नागरिक,\n\nहमें आपकी शिकायत संख्या **GRV-2026-35C09D27** प्राप्त हुई है। हमें आपकी परेशानी का पूरा एहसास है और हम आपको आश्वस्त करना चाहते हैं कि आपकी इस शिकायत (जो **अन्य विभाग** से संबंधित है) पर गंभीरता से विचार किया जा रहा है।\n\nहमारा प्रयास है कि इसका समाधान अगले **36 घंटों** के भीतर कर दिया जाए।\n\nआपके धैर्य और सहयोग के लिए धन्यवाद।\nउत्तर प्रदेश सरकार",
+    "id": "GRV-2026-35C09D27",
+    "status": "assigned",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
+        "timestamp": "2026-05-31T18:35:00.392022",
+        "note": "Grievance filed by Himanshu Yadav (PIN: 226010) in district Lucknow."
+      },
+      {
+        "status": "assigned",
+        "timestamp": "2026-05-31T18:35:00.392022",
+        "note": "Auto-routed to pothole_road. Officer Fallback Officer assigned."
+      }
+    ]
+  },
+  {
+    "spam_blocked": false,
+    "intake_flags": [],
+    "word_count": 21,
+    "normalized_text": "bhaiya yaha gomti nagar me sadak kharab hai, gadha ho gaya hai pichle 2 din se, emergency accident ho sakta hai",
+    "citizen_name": "Himanshu Yadav",
+    "citizen_mobile": "9876543210",
+    "district": "Lucknow",
+    "pincode": "226010",
+    "selected_department": "Other",
+    "other_department": "",
+    "complaint_language": "auto",
+    "category": "sanitation_waste",
+    "sub_category": "garbage_pile",
+    "department": "sanitation_waste",
+    "priority": 5,
+    "urgency_label": "critical",
+    "predicted_sla_hours": 7,
+    "confidence": 0.65,
+    "geo_tag": "Gomti Nagar",
+    "reasoning": [
+      "Matched keywords for sanitation_waste",
+      "Urgency determined as critical",
+      "Used fallback heuristic analysis"
+    ],
+    "distress_score": 9,
+    "emotional_tone": "panicked",
+    "detected_emotions": [
+      "fear",
+      "urgency",
+      "desperation"
+    ],
+    "escalation_recommended": true,
+    "sentiment_note": "Fallback heuristic analysis applied.",
+    "assigned_department": "Other",
+    "assigned_officer": "Fallback Officer",
+    "department_hi": "अन्य विभाग",
+    "overload_flag": false,
+    "avg_resolution_hours": 24,
+    "is_clustered": false,
+    "incident_id": null,
+    "incident_linked_count": 0,
+    "incident_severity": null,
+    "timestamp": "2026-05-31T18:34:10.319814",
+    "citizen_message": "आपकी शिकायत सफलतापूर्वक दर्ज कर ली गई है। आपकी शिकायत संख्या GRV-2026-B6E3732C है।\n\nयह 'अन्य विभाग' से संबंधित एक अति महत्वपूर्ण शिकायत है। हम इसका समाधान अगले 7 घंटों के भीतर सुनिश्चित करने का हर संभव प्रयास करेंगे।\n\nआपके धैर्य और सहयोग के लिए धन्यवाद।",
+    "id": "GRV-2026-B6E3732C",
+    "status": "assigned",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
+        "timestamp": "2026-05-31T18:34:10.319814",
+        "note": "Grievance filed by Himanshu Yadav (PIN: 226010) in district Lucknow."
+      },
+      {
+        "status": "assigned",
+        "timestamp": "2026-05-31T18:34:10.319814",
+        "note": "Auto-routed to sanitation_waste. Officer Fallback Officer assigned."
+      }
+    ]
+  },
+  {
+    "spam_blocked": false,
+    "intake_flags": [],
+    "word_count": 21,
+    "normalized_text": "bhaiya yaha gomti nagar me sadak kharab hai, gadha ho gaya hai pichle 2 din se, emergency accident ho sakta hai",
+    "citizen_name": "Himanshu Yadav",
+    "citizen_mobile": "9876543210",
+    "district": "Lucknow",
+    "pincode": "226010",
+    "selected_department": "Other",
+    "other_department": "",
+    "complaint_language": "auto",
+    "category": "sanitation_waste",
+    "sub_category": "garbage_pile",
+    "department": "sanitation_waste",
+    "priority": 5,
+    "urgency_label": "critical",
+    "predicted_sla_hours": 7,
+    "confidence": 0.65,
+    "geo_tag": "Gomti Nagar",
+    "reasoning": [
+      "Matched keywords for sanitation_waste",
+      "Urgency determined as critical",
+      "Used fallback heuristic analysis"
+    ],
+    "distress_score": 9,
+    "emotional_tone": "panicked",
+    "detected_emotions": [
+      "fear",
+      "urgency",
+      "desperation"
+    ],
+    "escalation_recommended": true,
+    "sentiment_note": "Fallback heuristic analysis applied.",
+    "assigned_department": "Other",
+    "assigned_officer": "Fallback Officer",
+    "department_hi": "अन्य विभाग",
+    "overload_flag": false,
+    "avg_resolution_hours": 24,
+    "is_clustered": false,
+    "incident_id": null,
+    "incident_linked_count": 0,
+    "incident_severity": null,
+    "timestamp": "2026-05-31T18:32:15.297554",
+    "citizen_message": "",
+    "id": "GRV-2026-681D86E5",
+    "status": "assigned",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
+        "timestamp": "2026-05-31T18:32:15.297554",
+        "note": "Grievance filed by Himanshu Yadav (PIN: 226010) in district Lucknow."
+      },
+      {
+        "status": "assigned",
+        "timestamp": "2026-05-31T18:32:15.297554",
+        "note": "Auto-routed to sanitation_waste. Officer Fallback Officer assigned."
+      }
+    ]
+  },
+  {
+    "id": "GRV-2026-8901",
+    "citizen_name": "Smt. Vineeta Bajpai",
+    "citizen_mobile": "9450123456",
+    "district": "Lucknow",
+    "pincode": "226016",
+    "raw_text": "चिनहट तिराहे पर पिछले दो हफ़्तों से स्ट्रीट लाइट बंद पड़ी है। रात में पूरा अंधेरा रहता है जिससे दुर्घटनाओं का डर बना रहता है।",
+    "normalized_text": "चिनहट तिराहे पर पिछले दो हफ़्तों से स्ट्रीट लाइट बंद पड़ी है। रात में पूरा अंधेरा रहता है जिससे दुर्घटनाओं का डर बना रहता है।",
+    "language": "Hindi",
+    "timestamp": "2026-05-22T10:15:00+05:30",
+    "category": "electricity",
+    "department_id": "electricity",
+    "department_name_hi": "लखनऊ विद्युत आपूर्ति प्रशासन (LESA)",
+    "priority": 3,
+    "urgency": "concerned",
+    "predicted_sla_hours": 12,
+    "assigned_officer": "Er. Vinay Dwivedi",
+    "overload_flag": true,
+    "status": "assigned",
+    "citizen_sms_hi": "नमस्ते नागरिक, आपकी विद्युत शिकायत (ID: GRV-2026-8901) लखनऊ विद्युत आपूर्ति प्रशासन (LESA) को सौंप दी गई है। नोडल अधिकारी Er. Vinay Dwivedi हैं। अनुमानित समाधान समय 12 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
+    "officer_note_en": "STREET LIGHT OUTAGE AT CHINHAT CROSSING. Reported darkness leading to potential safety issues. Urgent action required as LESA load is currently high.",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
         "timestamp": "2026-05-22T10:15:00+05:30",
-        "category": "electricity",
-        "department_id": "electricity",
-        "department_name_hi": "लखनऊ विद्युत आपूर्ति प्रशासन (LESA)",
-        "priority": 3,
-        "urgency": "concerned",
-        "predicted_sla_hours": 12,
-        "assigned_officer": "Er. Vinay Dwivedi",
-        "overload_flag": true,
+        "note": "Grievance received via SunwAI portal"
+      },
+      {
         "status": "assigned",
-        "citizen_sms_hi": "नमस्ते नागरिक, आपकी विद्युत शिकायत (ID: GRV-2026-8901) लखनऊ विद्युत आपूर्ति प्रशासन (LESA) को सौंप दी गई है। नोडल अधिकारी Er. Vinay Dwivedi हैं। अनुमानित समाधान समय 12 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
-        "officer_note_en": "STREET LIGHT OUTAGE AT CHINHAT CROSSING. Reported darkness leading to potential safety issues. Urgent action required as LESA load is currently high.",
-        "escalated": false,
-        "history": [
-            {
-                "status": "submitted",
-                "timestamp": "2026-05-22T10:15:00+05:30",
-                "note": "Grievance received via SunwAI portal"
-            },
-            {
-                "status": "assigned",
-                "timestamp": "2026-05-22T10:15:30+05:30",
-                "note": "Routed to LESA. Officer Er. Vinay Dwivedi assigned."
-            }
-        ],
-        "matched_keywords": [
-            "स्ट्रीट लाइट",
-            "बंद पड़ी",
-            "अंधेरा",
-            "दुर्घटनाओं"
-        ]
-    },
-    {
-        "id": "GRV-2026-8902",
-        "citizen_name": "Shri Amit Kumar",
-        "citizen_mobile": "9935102030",
-        "district": "Lucknow",
-        "pincode": "226012",
-        "raw_text": "Jal Sansthan ki pipe line leak ho gayi hai polytechnic chauraha metro station ke paas, lakho litre saaf pani sadak par beh raha hai. Please repair fast.",
-        "normalized_text": "Jal Sansthan ki pipe line leak ho gayi hai polytechnic chauraha metro station ke paas, lakho litre saaf pani sadak par beh raha hai. Please repair fast.",
-        "language": "Hinglish",
+        "timestamp": "2026-05-22T10:15:30+05:30",
+        "note": "Routed to LESA. Officer Er. Vinay Dwivedi assigned."
+      }
+    ],
+    "matched_keywords": [
+      "स्ट्रीट लाइट",
+      "बंद पड़ी",
+      "अंधेरा",
+      "दुर्घटनाओं"
+    ]
+  },
+  {
+    "id": "GRV-2026-8902",
+    "citizen_name": "Shri Amit Kumar",
+    "citizen_mobile": "9935102030",
+    "district": "Lucknow",
+    "pincode": "226012",
+    "raw_text": "Jal Sansthan ki pipe line leak ho gayi hai polytechnic chauraha metro station ke paas, lakho litre saaf pani sadak par beh raha hai. Please repair fast.",
+    "normalized_text": "Jal Sansthan ki pipe line leak ho gayi hai polytechnic chauraha metro station ke paas, lakho litre saaf pani sadak par beh raha hai. Please repair fast.",
+    "language": "Hinglish",
+    "timestamp": "2026-05-22T08:30:00+05:30",
+    "category": "water_supply",
+    "department_id": "water_supply",
+    "department_name_hi": "जल कल विभाग",
+    "priority": 4,
+    "urgency": "distressed",
+    "predicted_sla_hours": 24,
+    "assigned_officer": "Shri Amit Kumar",
+    "overload_flag": false,
+    "status": "in_progress",
+    "citizen_sms_hi": "नमस्ते नागरिक, आपकी जल आपूर्ति शिकायत (ID: GRV-2026-8902) जल कल विभाग को सौंप दी गई है। नोडल अधिकारी Shri Amit Kumar हैं। अनुमानित समाधान समय 24 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
+    "officer_note_en": "WATER PIPELINE LEAKAGE NEAR POLYTECHNIC METRO STATION. Critical clean water loss. Dispatched repair team to secure the pipe.",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
         "timestamp": "2026-05-22T08:30:00+05:30",
-        "category": "water_supply",
-        "department_id": "water_supply",
-        "department_name_hi": "जल कल विभाग",
-        "priority": 4,
-        "urgency": "distressed",
-        "predicted_sla_hours": 24,
-        "assigned_officer": "Shri Amit Kumar",
-        "overload_flag": false,
+        "note": "Grievance received via SunwAI portal"
+      },
+      {
+        "status": "assigned",
+        "timestamp": "2026-05-22T08:31:00+05:30",
+        "note": "Routed to Jal Kal. Officer Shri Amit Kumar assigned."
+      },
+      {
         "status": "in_progress",
-        "citizen_sms_hi": "नमस्ते नागरिक, आपकी जल आपूर्ति शिकायत (ID: GRV-2026-8902) जल कल विभाग को सौंप दी गई है। नोडल अधिकारी Shri Amit Kumar हैं। अनुमानित समाधान समय 24 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
-        "officer_note_en": "WATER PIPELINE LEAKAGE NEAR POLYTECHNIC METRO STATION. Critical clean water loss. Dispatched repair team to secure the pipe.",
-        "escalated": false,
-        "history": [
-            {
-                "status": "submitted",
-                "timestamp": "2026-05-22T08:30:00+05:30",
-                "note": "Grievance received via SunwAI portal"
-            },
-            {
-                "status": "assigned",
-                "timestamp": "2026-05-22T08:31:00+05:30",
-                "note": "Routed to Jal Kal. Officer Shri Amit Kumar assigned."
-            },
-            {
-                "status": "in_progress",
-                "timestamp": "2026-05-22T09:00:00+05:30",
-                "note": "Field engineers dispatched to the metro station site."
-            }
-        ],
-        "matched_keywords": [
-            "pipe",
-            "pipeline",
-            "leak",
-            "water",
-            "leakage"
-        ]
-    },
-    {
-        "id": "GRV-2026-8903",
-        "citizen_name": "Preeti Verma",
-        "citizen_mobile": "8090554433",
-        "district": "Lucknow",
-        "pincode": "226024",
-        "raw_text": "ललपटी रोड पर बहुत गहरे गड्ढे हैं जिससे रोज़ स्कूटी सवार फिसल रहे हैं। नगर निगम ध्यान दे।",
-        "normalized_text": "ललपटी रोड पर बहुत गहरे गड्ढे हैं जिससे रोज़ स्कूटी सवार फिसल रहे हैं। नगर निगम ध्यान दे।",
-        "language": "Hindi",
+        "timestamp": "2026-05-22T09:00:00+05:30",
+        "note": "Field engineers dispatched to the metro station site."
+      }
+    ],
+    "matched_keywords": [
+      "pipe",
+      "pipeline",
+      "leak",
+      "water",
+      "leakage"
+    ]
+  },
+  {
+    "id": "GRV-2026-8903",
+    "citizen_name": "Preeti Verma",
+    "citizen_mobile": "8090554433",
+    "district": "Lucknow",
+    "pincode": "226024",
+    "raw_text": "ललपटी रोड पर बहुत गहरे गड्ढे हैं जिससे रोज़ स्कूटी सवार फिसल रहे हैं। नगर निगम ध्यान दे।",
+    "normalized_text": "ललपटी रोड पर बहुत गहरे गड्ढे हैं जिससे रोज़ स्कूटी सवार फिसल रहे हैं। नगर निगम ध्यान दे।",
+    "language": "Hindi",
+    "timestamp": "2026-05-21T15:20:00+05:30",
+    "category": "pothole_road",
+    "department_id": "pothole_road",
+    "department_name_hi": "सड़क एवं मार्ग सुधार विभाग",
+    "priority": 4,
+    "urgency": "critical",
+    "predicted_sla_hours": 48,
+    "assigned_officer": "Er. R. K. Srivastava",
+    "overload_flag": false,
+    "status": "resolved",
+    "citizen_sms_hi": "प्रिय नागरिक, आपकी शिकायत (ID: GRV-2026-8903) का निवारण कर दिया गया है। सड़क एवं मार्ग सुधार विभाग द्वारा ललपटी रोड के गड्ढों को भर दिया गया है। जनसुनवाई पोर्टल पर अपनी प्रतिक्रिया दें। धन्यवाद!",
+    "officer_note_en": "DEEP POTHOLES ON LALPATI ROAD. Highly hazardous for two-wheelers. Dispatched asphalt crew.",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
         "timestamp": "2026-05-21T15:20:00+05:30",
-        "category": "pothole_road",
-        "department_id": "pothole_road",
-        "department_name_hi": "सड़क एवं मार्ग सुधार विभाग",
-        "priority": 4,
-        "urgency": "critical",
-        "predicted_sla_hours": 48,
-        "assigned_officer": "Er. R. K. Srivastava",
-        "overload_flag": false,
+        "note": "Grievance received via SunwAI portal"
+      },
+      {
+        "status": "assigned",
+        "timestamp": "2026-05-21T15:21:00+05:30",
+        "note": "Routed to Road Repair Department. Officer Er. R. K. Srivastava assigned."
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2026-05-21T16:00:00+05:30",
+        "note": "Road restoration crew initiated repairs."
+      },
+      {
         "status": "resolved",
-        "citizen_sms_hi": "प्रिय नागरिक, आपकी शिकायत (ID: GRV-2026-8903) का निवारण कर दिया गया है। सड़क एवं मार्ग सुधार विभाग द्वारा ललपटी रोड के गड्ढों को भर दिया गया है। जनसुनवाई पोर्टल पर अपनी प्रतिक्रिया दें। धन्यवाद!",
-        "officer_note_en": "DEEP POTHOLES ON LALPATI ROAD. Highly hazardous for two-wheelers. Dispatched asphalt crew.",
-        "escalated": false,
-        "history": [
-            {
-                "status": "submitted",
-                "timestamp": "2026-05-21T15:20:00+05:30",
-                "note": "Grievance received via SunwAI portal"
-            },
-            {
-                "status": "assigned",
-                "timestamp": "2026-05-21T15:21:00+05:30",
-                "note": "Routed to Road Repair Department. Officer Er. R. K. Srivastava assigned."
-            },
-            {
-                "status": "in_progress",
-                "timestamp": "2026-05-21T16:00:00+05:30",
-                "note": "Road restoration crew initiated repairs."
-            },
-            {
-                "status": "resolved",
-                "timestamp": "2026-05-22T12:00:00+05:30",
-                "note": "Potholes filled with bituminous concrete. Quality approved."
-            }
-        ],
-        "matched_keywords": [
-            "गड्ढे",
-            "सड़क",
-            "स्कूटी",
-            "फिसल रहे"
-        ]
-    },
-    {
-        "id": "GRV-2026-8904",
-        "citizen_name": "Dr. Manoj Pandey",
-        "citizen_mobile": "9140987654",
-        "district": "Lucknow",
-        "pincode": "226016",
-        "raw_text": "भूतनाथ मार्केट के पास नाली का गंदा पानी सड़क पर आ रहा है। भयंकर सड़ांध है, दुकानों में ग्राहक नहीं आ रहे।",
-        "normalized_text": "भूतनाथ मार्केट के पास नाली का गंदा पानी सड़क पर आ रहा है। भयंकर सड़ांध है, दुकानों में ग्राहक नहीं आ रहे।",
-        "language": "Hindi",
+        "timestamp": "2026-05-22T12:00:00+05:30",
+        "note": "Potholes filled with bituminous concrete. Quality approved."
+      }
+    ],
+    "matched_keywords": [
+      "गड्ढे",
+      "सड़क",
+      "स्कूटी",
+      "फिसल रहे"
+    ]
+  },
+  {
+    "id": "GRV-2026-8904",
+    "citizen_name": "Dr. Manoj Pandey",
+    "citizen_mobile": "9140987654",
+    "district": "Lucknow",
+    "pincode": "226016",
+    "raw_text": "भूतनाथ मार्केट के पास नाली का गंदा पानी सड़क पर आ रहा है। भयंकर सड़ांध है, दुकानों में ग्राहक नहीं आ रहे।",
+    "normalized_text": "भूतनाथ मार्केट के पास नाली का गंदा पानी सड़क पर आ रहा है। भयंकर सड़ांध है, दुकानों में ग्राहक नहीं आ रहे।",
+    "language": "Hindi",
+    "timestamp": "2026-05-22T18:40:00+05:30",
+    "category": "sanitation_waste",
+    "department_id": "sanitation_waste",
+    "department_name_hi": "नगर निगम स्वच्छता एवं कचरा प्रबंधन",
+    "priority": 3,
+    "urgency": "distressed",
+    "predicted_sla_hours": 24,
+    "assigned_officer": "Smt. Shweta Singh",
+    "overload_flag": false,
+    "status": "assigned",
+    "citizen_sms_hi": "नमस्ते नागरिक, आपकी स्वच्छता शिकायत (ID: GRV-2026-8904) नगर निगम स्वच्छता विभाग को सौंप दी गई है। नोडल अधिकारी Smt. Shweta Singh हैं। अनुमानित समाधान समय 24 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
+    "officer_note_en": "SEWER OVERFLOW NEAR BHOOTHNATH MARKET. Causing economic distress to merchants due to stench. Urgent cleaning of drainage block required.",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
         "timestamp": "2026-05-22T18:40:00+05:30",
-        "category": "sanitation_waste",
-        "department_id": "sanitation_waste",
-        "department_name_hi": "नगर निगम स्वच्छता एवं कचरा प्रबंधन",
-        "priority": 3,
-        "urgency": "distressed",
-        "predicted_sla_hours": 24,
-        "assigned_officer": "Smt. Shweta Singh",
-        "overload_flag": false,
+        "note": "Grievance received via SunwAI portal"
+      },
+      {
         "status": "assigned",
-        "citizen_sms_hi": "नमस्ते नागरिक, आपकी स्वच्छता शिकायत (ID: GRV-2026-8904) नगर निगम स्वच्छता विभाग को सौंप दी गई है। नोडल अधिकारी Smt. Shweta Singh हैं। अनुमानित समाधान समय 24 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
-        "officer_note_en": "SEWER OVERFLOW NEAR BHOOTHNATH MARKET. Causing economic distress to merchants due to stench. Urgent cleaning of drainage block required.",
-        "escalated": false,
-        "history": [
-            {
-                "status": "submitted",
-                "timestamp": "2026-05-22T18:40:00+05:30",
-                "note": "Grievance received via SunwAI portal"
-            },
-            {
-                "status": "assigned",
-                "timestamp": "2026-05-22T18:40:35+05:30",
-                "note": "Routed to Sanitation Department. Officer Smt. Shweta Singh assigned."
-            }
-        ],
-        "matched_keywords": [
-            "नाली",
-            "गंदा पानी",
-            "सड़क",
-            "बदबू",
-            "सड़ांध"
-        ]
-    },
-    {
-        "id": "GRV-2026-8905",
-        "citizen_name": "Vikas Singh Chaudhary",
-        "citizen_mobile": "7007123987",
-        "district": "Lucknow",
-        "pincode": "226010",
-        "raw_text": "Gomti Nagar sector 3 me logo ne foot path par permanent steel ki fencing laga di hai, illegal parking kar rahe hain. Please remove.",
-        "normalized_text": "Gomti Nagar sector 3 me logo ne foot path par permanent steel ki fencing laga di hai, illegal parking kar rahe hain. Please remove.",
-        "language": "Hinglish",
+        "timestamp": "2026-05-22T18:40:35+05:30",
+        "note": "Routed to Sanitation Department. Officer Smt. Shweta Singh assigned."
+      }
+    ],
+    "matched_keywords": [
+      "नाली",
+      "गंदा पानी",
+      "सड़क",
+      "बदबू",
+      "सड़ांध"
+    ]
+  },
+  {
+    "id": "GRV-2026-8905",
+    "citizen_name": "Vikas Singh Chaudhary",
+    "citizen_mobile": "7007123987",
+    "district": "Lucknow",
+    "pincode": "226010",
+    "raw_text": "Gomti Nagar sector 3 me logo ne foot path par permanent steel ki fencing laga di hai, illegal parking kar rahe hain. Please remove.",
+    "normalized_text": "Gomti Nagar sector 3 me logo ne foot path par permanent steel ki fencing laga di hai, illegal parking kar rahe hain. Please remove.",
+    "language": "Hinglish",
+    "timestamp": "2026-05-22T19:10:00+05:30",
+    "category": "encroachment",
+    "department_id": "encroachment",
+    "department_name_hi": "अतिक्रमण एवं अवैध निर्माण रोधी विभाग",
+    "priority": 2,
+    "urgency": "concerned",
+    "predicted_sla_hours": 72,
+    "assigned_officer": "Shri Rajesh Shukla",
+    "overload_flag": false,
+    "status": "assigned",
+    "citizen_sms_hi": "नमस्ते नागरिक, आपकी अतिक्रमण शिकायत (ID: GRV-2026-8905) अतिक्रमण विरोधी विभाग को सौंप दी गई है। नोडल अधिकारी Shri Rajesh Shukla हैं। अनुमानित समाधान समय 72 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
+    "officer_note_en": "ILLEGAL STEEL FENCING ON FOOTPATH AT GOMTI NAGAR SEC 3. Creating public hazard and illegal parking zones.",
+    "escalated": false,
+    "history": [
+      {
+        "status": "submitted",
         "timestamp": "2026-05-22T19:10:00+05:30",
-        "category": "encroachment",
-        "department_id": "encroachment",
-        "department_name_hi": "अतिक्रमण एवं अवैध निर्माण रोधी विभाग",
-        "priority": 2,
-        "urgency": "concerned",
-        "predicted_sla_hours": 72,
-        "assigned_officer": "Shri Rajesh Shukla",
-        "overload_flag": false,
+        "note": "Grievance received via SunwAI portal"
+      },
+      {
         "status": "assigned",
-        "citizen_sms_hi": "नमस्ते नागरिक, आपकी अतिक्रमण शिकायत (ID: GRV-2026-8905) अतिक्रमण विरोधी विभाग को सौंप दी गई है। नोडल अधिकारी Shri Rajesh Shukla हैं। अनुमानित समाधान समय 72 घंटे है। जनसुनवाई में आपका विश्वास हमारी प्रेरणा है।",
-        "officer_note_en": "ILLEGAL STEEL FENCING ON FOOTPATH AT GOMTI NAGAR SEC 3. Creating public hazard and illegal parking zones.",
-        "escalated": false,
-        "history": [
-            {
-                "status": "submitted",
-                "timestamp": "2026-05-22T19:10:00+05:30",
-                "note": "Grievance received via SunwAI portal"
-            },
-            {
-                "status": "assigned",
-                "timestamp": "2026-05-22T19:10:20+05:30",
-                "note": "Routed to Encroachment Department. Officer Shri Rajesh Shukla assigned."
-            }
-        ],
-        "matched_keywords": [
-            "fencing",
-            "illegal",
-            "parking",
-            "footpath"
-        ]
-    },
-    {
-        "grievance_id": "JSA-4E655D83",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-7426197C",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-CF239FFD",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-44050492",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-FB7640D3",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-985BDE4A",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-5433F1EE",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-1D2E70DC",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    },
-    {
-        "grievance_id": "JSA-D1512B73",
-        "citizen_name": "Test",
-        "department": "Other",
-        "department_hi": "अन्य विभाग",
-        "assigned_officer": "Fallback Officer",
-        "priority": 3,
-        "urgency_label": "Concerned",
-        "predicted_sla_hours": 24,
-        "overload_flag": false,
-        "citizen_message": "",
-        "status": "Assigned"
-    }
+        "timestamp": "2026-05-22T19:10:20+05:30",
+        "note": "Routed to Encroachment Department. Officer Shri Rajesh Shukla assigned."
+      }
+    ],
+    "matched_keywords": [
+      "fencing",
+      "illegal",
+      "parking",
+      "footpath"
+    ]
+  },
+  {
+    "grievance_id": "JSA-4E655D83",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-7426197C",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-CF239FFD",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-44050492",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-FB7640D3",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-985BDE4A",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-5433F1EE",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-1D2E70DC",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  },
+  {
+    "grievance_id": "JSA-D1512B73",
+    "citizen_name": "Test",
+    "department": "Other",
+    "department_hi": "अन्य विभाग",
+    "assigned_officer": "Fallback Officer",
+    "priority": 3,
+    "urgency_label": "Concerned",
+    "predicted_sla_hours": 24,
+    "overload_flag": false,
+    "citizen_message": "",
+    "status": "Assigned"
+  }
 ]

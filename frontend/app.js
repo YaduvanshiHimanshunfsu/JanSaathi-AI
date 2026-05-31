@@ -165,6 +165,8 @@ let currentLang = 'en'; // default English
 let grievancesData = [];
 let departmentsData = [];
 let sampleComplaints = [];
+let isOTPVerified = false;
+let sessionToken = null;
 
 // Chart.js instances
 let deptChartInstance = null;
@@ -189,6 +191,8 @@ const translations = {
     intake_subtitle: "Enter your official coordinates and submit details. SunwAI triages the issue natively.",
     lbl_citizen_name: "Citizen Name / आपका नाम *",
     lbl_citizen_mobile: "Mobile Number / मोबाइल नंबर *",
+    lbl_citizen_otp: "Enter OTP / ओटीपी दर्ज करें *",
+    lbl_citizen_address: "Full Address / पूरा पता *",
     lbl_citizen_district: "District / जिला *",
     lbl_citizen_pincode: "Pincode / पिनकोड *",
     lbl_select_dept: "Select Department / विभाग चुनें *",
@@ -267,6 +271,8 @@ const translations = {
     intake_subtitle: "अपने विवरण दर्ज करें। SunwAI एजेंट तुरंत कार्रवाई शुरू कर देंगे।",
     lbl_citizen_name: "नागरिक का नाम *",
     lbl_citizen_mobile: "मोबाइल नंबर *",
+    lbl_citizen_otp: "ओटीपी दर्ज करें *",
+    lbl_citizen_address: "पूरा पता *",
     lbl_citizen_district: "जिला चुनें *",
     lbl_citizen_pincode: "पिनकोड *",
     lbl_select_dept: "संबंधित विभाग *",
@@ -385,6 +391,8 @@ function applyTranslations() {
   document.getElementById('intake-subtitle').innerText = dict.intake_subtitle;
   document.getElementById('lbl-citizen-name').innerText = dict.lbl_citizen_name;
   document.getElementById('lbl-citizen-mobile').innerText = dict.lbl_citizen_mobile;
+  document.getElementById('lbl-citizen-otp').innerText = dict.lbl_citizen_otp;
+  document.getElementById('lbl-citizen-address').innerText = dict.lbl_citizen_address;
   document.getElementById('lbl-citizen-district').innerText = dict.lbl_citizen_district;
   document.getElementById('lbl-citizen-pincode').innerText = dict.lbl_citizen_pincode;
   document.getElementById('lbl-select-dept').innerText = dict.lbl_select_dept;
@@ -511,12 +519,34 @@ function loadSampleComplaintsLibrary() {
       const districts = ["Lucknow", "Kanpur", "Prayagraj", "Varanasi", "Gorakhpur", "Noida", "Ayodhya"];
       const pincodes = ["226001", "208002", "211003", "221005", "273001", "201301", "224123"];
       
+      const addresses = [
+        "Flat 101, Gomti Nagar Phase 2",
+        "House 45, Civil Lines",
+        "Block C, Sector 42",
+        "12/A, Near Sankat Mochan",
+        "Villa 3, Gorakhnath Road",
+        "Tower B, Tech Park",
+        "Street 5, Ram Janmabhoomi Marg"
+      ];
+      
       document.getElementById('citizen-name').value = names[idx % names.length];
       document.getElementById('citizen-mobile').value = mobiles[idx % mobiles.length];
+      document.getElementById('citizen-address').value = addresses[idx % addresses.length];
       document.getElementById('citizen-district').value = districts[idx % districts.length];
       document.getElementById('citizen-pincode').value = pincodes[idx % pincodes.length];
       document.getElementById('selected-department').value = item.category || 'auto';
       document.getElementById('complaint-text').value = item.text;
+      
+      // Auto-verify OTP for seamless demos
+      isOTPVerified = true;
+      document.getElementById('otp-group').style.display = 'block';
+      document.getElementById('citizen-otp').value = "123456";
+      document.getElementById('citizen-mobile').disabled = true;
+      document.getElementById('citizen-otp').disabled = true;
+      const verifyBtn = document.getElementById('btn-verify-otp');
+      if(verifyBtn) verifyBtn.style.display = 'none';
+      const statusMsg = document.getElementById('otp-status-msg');
+      if(statusMsg) statusMsg.style.display = 'block';
       
       toggleOtherDeptField();
     };
@@ -542,10 +572,78 @@ function loadSampleComplaintsLibrary() {
   });
 }
 
+// OTP Generation logic
+async function requestOTP() {
+  const mobile = document.getElementById('citizen-mobile').value.trim();
+  if (!mobile || mobile.length !== 10) {
+    alert(currentLang === 'en' ? 'Please enter a valid 10-digit mobile number first.' : 'कृपया पहले एक वैध 10-अंकीय मोबाइल नंबर दर्ज करें।');
+    return;
+  }
+  
+  const btn = document.getElementById('btn-send-otp');
+  btn.disabled = true;
+  btn.innerText = currentLang === 'en' ? 'Sending...' : 'भेज रहे हैं...';
+  
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/otp/generate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mobile })
+    });
+    
+    if (res.ok) {
+      document.getElementById('otp-group').style.display = 'block';
+      btn.innerText = currentLang === 'en' ? 'OTP Sent' : 'ओटीपी भेजा गया';
+    } else {
+      throw new Error('OTP generation failed or rate limited.');
+    }
+  } catch (error) {
+    alert(currentLang === 'en' ? 'Failed to send OTP. Please try again later.' : 'ओटीपी भेजने में विफल। कृपया बाद में प्रयास करें।');
+    btn.disabled = false;
+    btn.innerText = currentLang === 'en' ? 'Send OTP' : 'ओटीपी भेजें';
+  }
+}
+
+async function verifyOTP() {
+  const mobile = document.getElementById('citizen-mobile').value.trim();
+  const otp = document.getElementById('citizen-otp').value.trim();
+  
+  if (!otp || otp.length < 4) return;
+  
+  const btn = document.getElementById('btn-verify-otp');
+  btn.disabled = true;
+  btn.innerText = currentLang === 'en' ? 'Verifying...' : 'सत्यापित कर रहे हैं...';
+  
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/otp/verify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ mobile, otp })
+    });
+    
+    if (res.ok) {
+      const data = await res.json();
+      sessionToken = data.token;
+      isOTPVerified = true;
+      document.getElementById('citizen-mobile').disabled = true;
+      document.getElementById('citizen-otp').disabled = true;
+      btn.style.display = 'none';
+      document.getElementById('otp-status-msg').style.display = 'block';
+    } else {
+      throw new Error('Invalid OTP');
+    }
+  } catch (error) {
+    alert(currentLang === 'en' ? 'Invalid OTP. Please try again.' : 'अमान्य ओटीपी। कृपया पुनः प्रयास करें।');
+    btn.disabled = false;
+    btn.innerText = 'Verify';
+  }
+}
+
 // POST complaint details with step delay agentic checks
 async function submitComplaint() {
   const citizenName = document.getElementById('citizen-name').value.trim();
   const citizenMobile = document.getElementById('citizen-mobile').value.trim();
+  const address = document.getElementById('citizen-address').value.trim();
   const district = document.getElementById('citizen-district').value;
   const pincode = document.getElementById('citizen-pincode').value.trim();
   const selectedDept = document.getElementById('selected-department').value;
@@ -554,8 +652,13 @@ async function submitComplaint() {
   const complaintText = document.getElementById('complaint-text').value.trim();
   
   // Validation checks
-  if (!citizenName || !citizenMobile || !pincode || !complaintText) {
+  if (!citizenName || !citizenMobile || !pincode || !complaintText || !address) {
     alert(currentLang === 'en' ? 'Please fill in all required fields (*) before processing!' : 'कृपया प्रसंस्करण से पहले सभी आवश्यक फ़ील्ड (*) भरें!');
+    return;
+  }
+  
+  if (!isOTPVerified) {
+    alert(currentLang === 'en' ? 'Please generate and verify OTP first.' : 'कृपया पहले ओटीपी जनरेट करें और सत्यापित करें।');
     return;
   }
   
@@ -571,6 +674,10 @@ async function submitComplaint() {
   successCard.style.display = 'none';
   orchestrator.style.display = 'block';
   submitBtn.disabled = true;
+  
+  // Rate-limiting visual cue
+  const originalBtnText = document.getElementById('txt-submit-btn').innerText;
+  document.getElementById('txt-submit-btn').innerText = currentLang === 'en' ? 'Please wait... Processing securely' : 'कृपया प्रतीक्षा करें... सुरक्षित प्रसंस्करण जारी';
   
   const steps = [
     { id: 'step-intake' },
@@ -596,8 +703,9 @@ async function submitComplaint() {
         pincode: pincode,
         selected_department: selectedDept,
         other_department: otherDept,
-        raw_text: complaintText,
-        complaint_language: complaintLang
+        raw_text: complaintText + "\n[Address: " + address + "]",
+        complaint_language: complaintLang,
+        otp_verified: isOTPVerified
       })
     });
     
@@ -623,15 +731,32 @@ async function submitComplaint() {
     setTimeout(() => {
       orchestrator.style.display = 'none';
       submitBtn.disabled = false;
+      document.getElementById('txt-submit-btn').innerText = originalBtnText;
       
       // Clean intake form
       document.getElementById('citizen-name').value = '';
       document.getElementById('citizen-mobile').value = '';
       document.getElementById('citizen-pincode').value = '';
+      document.getElementById('citizen-address').value = '';
       document.getElementById('other-department').value = '';
       document.getElementById('complaint-text').value = '';
       document.getElementById('selected-department').value = 'auto';
       document.getElementById('complaint-language').value = 'auto';
+      
+      // Reset OTP states
+      document.getElementById('citizen-otp').value = '';
+      document.getElementById('otp-group').style.display = 'none';
+      document.getElementById('citizen-mobile').disabled = false;
+      document.getElementById('citizen-otp').disabled = false;
+      document.getElementById('btn-send-otp').disabled = false;
+      document.getElementById('btn-send-otp').innerText = currentLang === 'en' ? 'Send OTP' : 'ओटीपी भेजें';
+      document.getElementById('btn-verify-otp').style.display = 'inline-block';
+      document.getElementById('btn-verify-otp').disabled = false;
+      document.getElementById('btn-verify-otp').innerText = 'Verify';
+      document.getElementById('otp-status-msg').style.display = 'none';
+      isOTPVerified = false;
+      sessionToken = null;
+      
       toggleOtherDeptField();
       
       // Set results values
@@ -643,6 +768,39 @@ async function submitComplaint() {
       `;
       document.getElementById('result-sla').innerText = `${result.predicted_sla_hours} ${currentLang === 'en' ? 'Hours' : 'घंटे'}`;
       document.getElementById('result-sms').innerText = result.citizen_sms_hi;
+      
+      // Render Credibility Index
+      if (result.credibility_index !== undefined) {
+        document.getElementById('credibility-container').style.display = 'block';
+        
+        let color = '#ef4444'; // Red for low
+        let label = 'Low (Manual Review)';
+        let check = '';
+        
+        if (result.credibility_level === 'medium') {
+          color = '#f59e0b'; // Orange
+          label = 'Medium (Standard)';
+        } else if (result.credibility_level === 'high') {
+          color = '#3b82f6'; // Blue
+          label = 'High (Priority)';
+          check = '✓';
+        } else if (result.credibility_level === 'verified') {
+          color = '#10b981'; // Green
+          label = 'Verified (Fast-track)';
+          check = '✓';
+        }
+        
+        document.getElementById('result-credibility-text').innerHTML = `${result.credibility_index}/100 ${check} ${label}`;
+        document.getElementById('result-credibility-text').style.color = color;
+        
+        // Slight delay for animation
+        setTimeout(() => {
+          document.getElementById('result-credibility-bar').style.width = `${result.credibility_index}%`;
+          document.getElementById('result-credibility-bar').style.background = `linear-gradient(90deg, #3b82f6, ${color})`;
+        }, 100);
+      } else {
+        document.getElementById('credibility-container').style.display = 'none';
+      }
       
       // Render dynamic bilingual keyword tags if present in response
       const keywordsContainer = document.getElementById('result-keywords-container');
@@ -669,6 +827,7 @@ async function submitComplaint() {
   } catch (error) {
     alert('Agent processing failed. Verify server bindings.');
     submitBtn.disabled = false;
+    document.getElementById('txt-submit-btn').innerText = originalBtnText;
     orchestrator.style.display = 'none';
   }
 }
